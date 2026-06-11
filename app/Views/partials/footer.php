@@ -8,7 +8,7 @@
       <p class="footer-desc"><?= e($f['desc']) ?></p>
       <div class="socials">
         <?php foreach ($f['socials'] as $s): ?>
-          <a href="<?= e($s['href']) ?>" target="_blank" rel="noopener noreferrer" title="<?= e($s['title']) ?>" aria-label="<?= e($s['title']) ?>"><?= social_icon($s['icon']) ?></a>
+          <a class="social social--<?= e($s['icon']) ?>" href="<?= e($s['href']) ?>" target="_blank" rel="noopener noreferrer" title="<?= e($s['title']) ?>" aria-label="<?= e($s['title']) ?>"><?= social_icon($s['icon']) ?></a>
         <?php endforeach; ?>
       </div>
     </div>

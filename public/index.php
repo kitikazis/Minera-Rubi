@@ -15,6 +15,14 @@ if (php_sapi_name() === 'cli-server') {
     }
 }
 
+// Caché: el HTML se revalida siempre (para que el usuario reciba la última
+// versión). Los assets se versionan con ?v=<mtime> en la función asset(),
+// así que pueden cachearse de forma agresiva sin quedar obsoletos.
+if (php_sapi_name() !== 'cli-server') {
+    header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+}
+
 define('BASE_PATH', dirname(__DIR__));
 
 // URL base (soporta despliegue en subcarpeta)
