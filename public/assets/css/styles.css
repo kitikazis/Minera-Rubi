@@ -38,9 +38,13 @@ img{max-width:100%;display:block}
 .nav--solid,.nav.scrolled{background:rgba(255,255,255,.97);box-shadow:0 2px 32px rgba(0,0,0,.10);backdrop-filter:blur(12px)}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 40px;height:86px;display:flex;align-items:center;gap:0;transition:height .35s}
 .nav.scrolled .nav-inner{height:68px}
-.brand{font-family:'Montserrat',sans-serif;font-weight:900;font-size:21px;letter-spacing:4px;color:#fff;margin-right:auto}
-.brand span{color:#000}
-.nav--solid .brand,.nav.scrolled .brand{color:var(--dark)}
+.brand{display:flex;align-items:center;margin-right:auto;transition:opacity .3s}
+.brand:hover{opacity:.85}
+.brand-logo{height:48px;width:auto;display:block;transition:height .35s}
+.nav.scrolled .brand-logo{height:40px}
+.brand-logo--dark{display:none}
+.nav--solid .brand-logo--light,.nav.scrolled .brand-logo--light{display:none}
+.nav--solid .brand-logo--dark,.nav.scrolled .brand-logo--dark{display:block}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-link{font-family:'Poppins',sans-serif;font-weight:500;font-size:13px;letter-spacing:.5px;color:rgba(255,255,255,.92);padding:4px 0;position:relative;transition:.3s}
 .nav--solid .nav-link,.nav.scrolled .nav-link{color:var(--dark)}
@@ -184,8 +188,8 @@ img{max-width:100%;display:block}
 /* ===== Footer ===== */
 .footer{background:var(--dark);border-top:3px solid var(--gold);padding-top:64px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1.2fr 1fr;gap:40px;padding-bottom:56px}
-.footer-brand{font-family:'Montserrat',sans-serif;font-weight:900;font-size:24px;letter-spacing:4px;color:#fff;margin-bottom:16px}
-.footer-brand span{color:var(--gold)}
+.footer-brand{margin-bottom:18px}
+.footer-logo{height:62px;width:auto;display:block}
 .footer-desc{font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,.55);line-height:1.75;max-width:280px;margin-bottom:24px}
 .socials{display:flex;gap:10px}
 .socials a{width:36px;height:36px;border-radius:4px;border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-weight:800;font-size:12px;transition:.3s}
@@ -268,6 +272,9 @@ main{animation:pageIn .5s ease both}
 }
 @media(max-width:560px){
   .grid-5{grid-template-columns:1fr}
+  .brand-logo{height:42px}
+  .nav.scrolled .brand-logo{height:38px}
+  .footer-logo{height:54px}
   .stat{padding:28px 12px}
   .stat-val{font-size:clamp(38px,12vw,52px)}
   .footer-grid{grid-template-columns:1fr}

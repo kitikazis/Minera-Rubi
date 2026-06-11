@@ -1,0 +1,28 @@
+<svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- VERSIÓN MONOCROMO DORADO (variación marca) -->
+  <g id="icon-gold">
+    <line x1="60" y1="10" x2="60" y2="30" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="85" y1="15" x2="100" y2="30" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="100" y1="40" x2="110" y2="55" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="100" y1="65" x2="110" y2="80" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="85" y1="90" x2="100" y2="105" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="95" x2="60" y2="115" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="35" y1="90" x2="20" y2="105" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="65" x2="10" y2="80" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="40" x2="10" y2="55" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="35" y1="15" x2="20" y2="30" stroke="#EBAF00" stroke-width="3" stroke-linecap="round"/>
+
+    <circle cx="60" cy="55" r="25" fill="#EBAF00" />
+
+    <g id="gem-gold">
+      <polygon points="40,65 80,65 60,45" fill="#EBAF00"/>
+      <polygon points="35,75 85,75 80,105 40,105" fill="#EBAF00"/>
+      <polygon points="40,105 80,105 60,130" fill="#EBAF00"/>
+    </g>
+  </g>
+
+  <line x1="130" y1="30" x2="130" y2="130" stroke="#EBAF00" stroke-width="2"/>
+
+  <text x="150" y="65" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="900" fill="#EBAF00" letter-spacing="-1">EL RUBÍ</text>
+  <text x="150" y="95" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#EBAF00" opacity="0.9" letter-spacing="1">PLANTA MINERA</text>
+</svg>

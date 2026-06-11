@@ -1,7 +1,10 @@
 <?php /** @var array $data @var string $active @var bool $transparentNav */ ?>
 <nav class="nav<?= $transparentNav ? '' : ' nav--solid' ?>" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="<?= url('') ?>">EL <span>RUBÍ</span></a>
+    <a class="brand" href="<?= url('') ?>" aria-label="El Rubí — Inicio">
+      <img class="brand-logo brand-logo--light" src="<?= asset('images/logo-el-rubi-blanco.svg') ?>" alt="El Rubí — Planta Minera" width="160" height="56">
+      <img class="brand-logo brand-logo--dark" src="<?= asset('images/logo-el-rubi.svg') ?>" alt="El Rubí — Planta Minera" width="160" height="56">
+    </a>
 
     <div class="nav-links" id="navLinks">
       <?php foreach ($data['nav'] as $item): ?>
