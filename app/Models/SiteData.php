@@ -139,7 +139,7 @@ class SiteData
             'footer' => [
                 'desc' => 'Minera MH S.A.C. – Planta El Rubí. Compra de mineral aurífero y apoyo a la minería artesanal formalizada en Chala, Arequipa.',
                 'locs' => ['Secocha', 'Huanca', 'Colquemarca', 'Pacoya'],
-                'copy' => '© 2024 Planta El Rubí — Minera MH S.A.C.',
+                'copy' => '© ' . date('Y') . ' Planta El Rubí — Minera MH S.A.C.',
                 'socials' => [
                     ['label' => 'f',  'title' => 'Facebook',  'href' => 'https://www.facebook.com/people/Minera-MH/'],
                     ['label' => 'ig', 'title' => 'Instagram', 'href' => 'https://www.instagram.com/mineramh'],
