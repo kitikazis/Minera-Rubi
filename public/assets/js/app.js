@@ -19,8 +19,17 @@
   var burger = document.getElementById('hamburger');
   var mobile = document.getElementById('navMobile');
   if (burger && mobile) {
+    var setMenu = function (open) {
+      mobile.classList.toggle('open', open);
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
     burger.addEventListener('click', function () {
-      mobile.classList.toggle('open');
+      setMenu(!mobile.classList.contains('open'));
+    });
+    // Cierra el menú al tocar cualquier enlace
+    mobile.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
     });
   }
 
