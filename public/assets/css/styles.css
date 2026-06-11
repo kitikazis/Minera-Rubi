@@ -40,8 +40,9 @@ img{max-width:100%;display:block}
 .nav.scrolled .nav-inner{height:68px}
 .brand{display:flex;align-items:center;margin-right:auto;transition:opacity .3s}
 .brand:hover{opacity:.85}
-.brand-logo{height:48px;width:auto;display:block;transition:height .35s}
-.nav.scrolled .brand-logo{height:40px}
+.brand-logo{height:50px;width:auto;display:block;transition:height .35s}
+.nav.scrolled .brand-logo{height:42px}
+.brand-logo--light{filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
 .brand-logo--dark{display:none}
 .nav--solid .brand-logo--light,.nav.scrolled .brand-logo--light{display:none}
 .nav--solid .brand-logo--dark,.nav.scrolled .brand-logo--dark{display:block}
