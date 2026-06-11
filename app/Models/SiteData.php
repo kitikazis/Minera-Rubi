@@ -141,9 +141,9 @@ class SiteData
                 'locs' => ['Secocha', 'Huanca', 'Colquemarca', 'Pacoya'],
                 'copy' => '© ' . date('Y') . ' Planta El Rubí — Minera MH S.A.C.',
                 'socials' => [
-                    ['label' => 'f',  'title' => 'Facebook',  'href' => 'https://www.facebook.com/people/Minera-MH/'],
-                    ['label' => 'ig', 'title' => 'Instagram', 'href' => 'https://www.instagram.com/mineramh'],
-                    ['label' => 'yt', 'title' => 'YouTube',   'href' => 'https://www.youtube.com/@MINERAMHPLANTAELRUBI'],
+                    ['icon' => 'facebook',  'title' => 'Facebook',  'href' => 'https://www.facebook.com/people/Minera-MH/'],
+                    ['icon' => 'instagram', 'title' => 'Instagram', 'href' => 'https://www.instagram.com/mineramh'],
+                    ['icon' => 'youtube',   'title' => 'YouTube',   'href' => 'https://www.youtube.com/@MINERAMHPLANTAELRUBI'],
                 ],
             ],
         ];
