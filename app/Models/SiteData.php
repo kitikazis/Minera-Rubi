@@ -39,11 +39,11 @@ class SiteData
             ],
 
             'banners' => [
-                'servicios'      => ['eyebrow' => 'Servicios',  'title' => 'Servicios',      'sub' => 'Compra de mineral aurífero con precios justos, pago en 48h y respaldo a la formalización.'],
-                'procesos'       => ['eyebrow' => 'Operaciones','title' => 'Procesos',       'sub' => 'Del acopio al pago: un proceso ágil, transparente y seguro.'],
-                'empresa'        => ['eyebrow' => 'Nosotros',   'title' => 'Empresa',        'sub' => 'Una década consolidando la minería formal y responsable en Arequipa.'],
-                'sostenibilidad' => ['eyebrow' => 'Compromiso', 'title' => 'Sostenibilidad', 'sub' => 'Apoyamos a los pequeños productores en cada paso de su formalización.'],
-                'contacto'       => ['eyebrow' => 'Contáctanos','title' => 'Contacto',       'sub' => 'Atención de lunes a domingo de 8:00 a 18:00 en Chala, Arequipa.'],
+                'servicios'      => ['eyebrow' => 'Servicios',  'title' => 'Servicios',      'sub' => 'Compra de mineral aurífero con precios justos, pago en 48h y respaldo a la formalización.', 'image' => 'https://images.unsplash.com/photo-1594896733292-9a77b5809c63?w=1920&auto=format&fit=crop&q=80'],
+                'procesos'       => ['eyebrow' => 'Operaciones','title' => 'Procesos',       'sub' => 'Del acopio al pago: un proceso ágil, transparente y seguro.', 'image' => 'https://images.unsplash.com/photo-1777578211290-cb2defd51d33?w=1920&auto=format&fit=crop&q=80'],
+                'empresa'        => ['eyebrow' => 'Nosotros',   'title' => 'Empresa',        'sub' => 'Una década consolidando la minería formal y responsable en Arequipa.', 'image' => 'https://images.unsplash.com/photo-1672187493247-52c3084c9785?w=1920&auto=format&fit=crop&q=80'],
+                'sostenibilidad' => ['eyebrow' => 'Compromiso', 'title' => 'Sostenibilidad', 'sub' => 'Apoyamos a los pequeños productores en cada paso de su formalización.', 'image' => 'https://images.unsplash.com/photo-1568729670692-0d2de9a3c027?w=1920&auto=format&fit=crop&q=80'],
+                'contacto'       => ['eyebrow' => 'Contáctanos','title' => 'Contacto',       'sub' => 'Atención de lunes a domingo de 8:00 a 18:00 en Chala, Arequipa.', 'image' => 'https://images.unsplash.com/photo-1610046932034-fc8170d01155?w=1920&auto=format&fit=crop&q=80'],
             ],
 
             'servicesTitle' => 'COMPRA DE MINERAL AURÍFERO',
