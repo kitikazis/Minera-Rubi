@@ -3,7 +3,7 @@
   <div class="container footer-grid">
     <div>
       <div class="footer-brand">
-        <img src="<?= asset('images/logo-el-rubi-blanco.svg') ?>" alt="El Rubí — Planta Minera" class="footer-logo" width="180" height="63" loading="lazy">
+        <img src="<?= asset('images/logo-oficial.png') ?>" alt="El Rubí — Planta Minera" class="footer-logo" loading="lazy">
       </div>
       <p class="footer-desc"><?= e($f['desc']) ?></p>
       <div class="socials">
