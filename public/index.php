@@ -19,7 +19,15 @@ define('BASE_PATH', dirname(__DIR__));
 
 // URL base (soporta despliegue en subcarpeta)
 $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-define('BASE_URL', rtrim($scriptDir, '/'));
+$baseUrl   = rtrim($scriptDir, '/');
+
+// En hosting compartido se sube todo a /htdocs y el .htaccess raíz reescribe
+// internamente hacia /public. Quitamos ese sufijo para tener URLs limpias.
+if (substr($baseUrl, -7) === '/public') {
+    $baseUrl = substr($baseUrl, 0, -7);
+}
+
+define('BASE_URL', $baseUrl);
 
 require BASE_PATH . '/app/core/helpers.php';
 require BASE_PATH . '/app/core/Router.php';
