@@ -2,7 +2,9 @@
 <nav class="nav<?= $transparentNav ? '' : ' nav--solid' ?>" id="nav">
   <div class="nav-inner">
     <a class="brand" href="<?= url('') ?>" aria-label="El Rubí — Inicio">
-      <img class="brand-logo" src="<?= asset('images/logo-oficial.png') ?>" alt="El Rubí — Planta Minera">
+      <img class="brand-logo logo-dark" src="<?= asset('images/logo-oficial.png') ?>" alt="El Rubí — Planta Minera">
+      
+      <img class="brand-logo logo-light" src="<?= asset('images/logo-blanco.png') ?>" alt="El Rubí — Planta Minera">
     </a>
 
     <div class="nav-links" id="navLinks">

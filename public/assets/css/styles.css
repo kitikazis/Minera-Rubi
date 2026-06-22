@@ -42,9 +42,34 @@ img{max-width:100%;display:block}
 .brand:hover{opacity:.85}
 .brand-logo{height:46px;width:auto;display:block;transition:height .35s}
 .nav.scrolled .brand-logo{height:40px}
-/* Sobre el hero (nav transparente): chip claro para que el logo resalte.
-   Al hacer scroll / en páginas internas el nav es blanco y no hace falta. */
-.nav:not(.nav--solid):not(.scrolled) .brand{background:#fff;border-radius:10px;padding:6px 14px;box-shadow:0 6px 22px rgba(0,0,0,.20)}
+
+/* ===== NUEVA LÓGICA DE INTERCAMBIO SELECTIVO ===== */
+
+/* 1. Cuando estás arriba del todo (Menú transparente): Muestra el logo blanco, oculta el oscuro */
+.nav:not(.nav--solid):not(.scrolled) .logo-dark { 
+  display: none; 
+}
+.nav:not(.nav--solid):not(.scrolled) .logo-light { 
+  display: block; 
+  height: 75px; /* Modifica este número si quieres que sea aún más grande (ej. 62px) */
+}
+/* Asegura que no quede ningún residuo del recuadro blanco antiguo arriba del todo */
+.nav:not(.nav--solid):not(.scrolled) .brand {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* 2. Cuando haces scroll hacia abajo (Menú sólido blanco): Muestra el logo oscuro, oculta el blanco */
+.nav.scrolled .logo-dark, .nav--solid .logo-dark { 
+  display: block; 
+}
+.nav.scrolled .logo-light, .nav--solid .logo-light { 
+  display: none; 
+}
+/* ================================================= */
+
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-link{font-family:'Poppins',sans-serif;font-weight:500;font-size:13px;letter-spacing:.5px;color:rgba(255,255,255,.92);padding:4px 0;position:relative;transition:.3s}
 .nav--solid .nav-link,.nav.scrolled .nav-link{color:var(--dark)}
@@ -76,10 +101,70 @@ img{max-width:100%;display:block}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
 
 /* ===== BANNER (páginas internas) ===== */
-.banner{min-height:52vh;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center 35%;padding:140px 24px 56px}
-.banner-content{max-width:760px}
-.banner-content h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(38px,6vw,68px);line-height:1.05;letter-spacing:-1px;color:#fff;margin:18px 0 20px}
+.banner{min-height:52vh;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center 35%;padding:clamp(60px,14vh,140px) 24px clamp(40px,7vh,56px)}
+.banner-content{max-width:760px;width:100%;padding:0 20px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.banner-content h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(36px,5.5vw,64px);line-height:1.05;letter-spacing:-1px;color:#fff;margin:8px 0 12px}
 .banner-sub{font-family:'Inter',sans-serif;font-size:clamp(15px,1.7vw,18px);color:rgba(255,255,255,.8);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* --- Banner: MINERÍA RESPONSABLE (scoped, mobile-first) */
+.banner.banner--responsible{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:60svh;
+  padding:clamp(36px,8vh,56px) 16px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+.banner.banner--responsible .banner-content{
+  width:100%;
+  max-width:980px;
+  padding:0 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+.banner.banner--responsible .banner-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  color:#fff;
+  margin:0;
+  line-height:1.05;
+  font-size:clamp(24px,6.5vw,42px);
+  letter-spacing:-0.5px;
+}
+.banner.banner--responsible .banner-sub{
+  color:rgba(255,255,255,0.88);
+  font-family:'Inter',sans-serif;
+  font-size:clamp(14px,3.5vw,18px);
+  max-width:760px;
+  margin:0;
+  line-height:1.65;
+}
+.banner.banner--responsible .banner-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+@media (min-width: 768px){
+  .banner.banner--responsible{min-height:66svh;padding:clamp(48px,12vh,90px) 24px}
+  .banner.banner--responsible .banner-title{font-size:clamp(32px,6vw,54px)}
+  .banner.banner--responsible .banner-sub{font-size:clamp(15px,2.2vw,18px)}
+  .banner.banner--responsible .banner-content{padding:0 24px}
+}
+
+@media (min-width: 1024px){
+  .banner.banner--responsible{min-height:72svh;padding:clamp(60px,10vh,120px) 32px;background-position:center center}
+  .banner.banner--responsible .banner-content{max-width:1200px;padding:0 32px}
+  .banner.banner--responsible .banner-title{font-size:clamp(38px,4.6vw,72px)}
+}
+
+@media (min-width: 1280px){
+  .banner.banner--responsible .banner-content{max-width:1350px}
+  .banner.banner--responsible .banner-title{font-size:clamp(44px,4.2vw,88px)}
+}
 
 /* ===== STATS ===== */
 .stats-section{background:var(--dark);border-top:3px solid var(--gold);scroll-margin-top:80px}
